@@ -2,7 +2,6 @@ Step 1: Set up the API_KEY and run the streamlit app
 Type the commands below in terminal:
 
 API_KEY="your own API KEY" streamlit run assign1_5940.py
-![alt text](6da6863f-40e6-4cbe-afd0-762995b8272a.png)
 Step 2: Set up model, chunking strategy, and temperature in sidebar.
 
 Step 3: Upload documents.
