@@ -1,92 +1,56 @@
-# INFO 5940 
-Welcome to the INFO 5940 repository. You will complete your work using [**GitHub Codespaces**](#about-github-codespaces) and save your progress in your own GitHub repository. This guide will walk you through setting up the development environment and running the test notebook.  
+Step 1: Set up the API_KEY and run the streamlit app
+Type the commands below in terminal:
 
-## Getting Started 
+API_KEY="your own API KEY" streamlit run assign1_5940.py
+![alt text](6da6863f-40e6-4cbe-afd0-762995b8272a.png)
+Step 2: Set up model, chunking strategy, and temperature in sidebar.
 
-### Step 1: Fork this repository 
-1. Click the **Fork** button (top right of this page).
-2. This will create a copy of the repo under **your own GitHub account**.
+Step 3: Upload documents.
 
-Forking creates a personal copy of the repo under **your** GitHub account.  
-- You can commit, push, and experiment freely.  
-- Your work stays separate from the official class materials.
+Step 4:Choose the Retrieve Documents button.
 
-### Step 2: Open your forked repo Codespace
-1. Go to **your forked repo**.
-2. Click the green **Code** button and switch to the **Codespaces** tab.  
-3. Select **Create Codespace**.
-4. Wait a few minutes for the environment to finish setting up.
+Step 5: Then type the question in the bottom box to ask queestion.
 
-### Step 3: Verify your environment 
-Once the Codespace is ready: 
-1. If you are in `<your-file-name>.ipynb` in your codespace.
-2. Install the Python 3.11.13 Kernel.  In the top-right corner, click **Select Kernel**.
-    1. If **Install/Enable suggested extensions Python + Jupyter** appears, select it, and wait for the install to finish before moving on to the next step.
-    2. Select **Python Environments** choose **Python 3.11.13 (first option)**.
-3. Run the code block to check your setup. 
 
-## About GitHub Codespaces
 
-[Codespaces](https://docs.github.com/en/codespaces) is a complete software development and execution environment, running in the cloud, with its primary interface being a VSCode instance running in your browser.
+Overview of Application Features
+RAG Chat Box 🤖
 
-Codespaces is not free, but their per-month [free quota](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#free-quota) is generous.  Codespaces is free under the [GitHub Student Developer Pack](https://education.github.com/pack#github-codespaces).
+An intelligent document question-answering system based on Streamlit + LangChain + OpenAI, which supports uploading documents, building knowledge bases, and interactive question-answering with LLM.
+Front-end Page & Functional Modules
+1. Sidebar Settings
 
-### Codespaces Tips
+-ChatGPT Model: Use the drop-down menu to select a different model (e.g., gpt-4o, gpt-4o-mini).
+![alt text](b2f36775-9dd7-40a3-9bd7-3cd457cdf1d4.png)
+-Chunking Strategy: Select a document chunking strategy (recursive, character, markdown).
+![alt text](94034322-e9a8-41fc-8de0-062b71648ddf.png)
+-Temperature: Use the slider to adjust the randomness of the generated responses (default 0.2, for a more robust approach).
+![alt text](84b9f688-a8b2-4db9-b57e-7bf64eaea22d.png)
+Highlights: Users can flexibly select models and parameters to balance accuracy and creativity.
 
-* Codespaces keep running even when you close your browser (but will time out and stop after a while)
-* Unless you're on a free plan, or within your free quota, costs acrue while the codespace is running, whether or not you have it open in your browser or are working on it
-* You can control when it's running, and the space it takes up.  Check out [GitHub's codespaces lifecycle documentation](https://docs.github.com/en/codespaces/about-codespaces/understanding-the-codespace-lifecycle)
+2. Main Page
 
-## Sync Updates 
-To make sure your personal forked repository stays up to date with the original class repository, please follow these steps:
-1. Open your forked repo.
-2. At the top of the page, you should see a banner or menu option that shows whether your fork is behind the original repo.
-3. Click the **Sync fork** button.
-4. In the dropdown, choose **Update branch** to pull the latest changes from the original repo into your fork.
-
-Optionally, you can also follow these steps to create a new branch on your fork:
-1. Open your **forked repository** on GitHub.  
-2. At the top of the page, next to the branch dropdown, click the **Branches** button.  
-3. In the **Branches** view, click the green **New Branch** button.  
-4. In the popup window, enter a branch name.  
-   - You can use any name you like, but it’s recommended to match the branch name used in class for better organization.  
-5. Under **Branch source**, select:  
-   - **Repository:** `AyhamB/INFO-5940-Codespace`  
-   - **Branch:** choose the branch you want to sync from (e.g., `streamlit`).  
-6. Click the green **Create New Branch** button.  
-7. Verify that you’re now back in **your fork**, on the new branch you just created.  
-8. Click the **Code** button and create a new Codespace (if you don’t already have one).  
-   - Make sure the Codespace is created from the **current branch**.
-  
-## Running a Streamlit App on Codespaces  
-Follow these steps to launch and view your Streamlit app in GitHub Codespaces:
-1. **Open the terminal** inside your Codespace.
-2. Run the command:  
-   ```bash
-   streamlit run your-file-name.py
-   ```  
-   **(Replace `your-file-name.py` with the actual name of your Streamlit app file, e.g., `hello_app.py`.)**
-3. After pressing **Enter**, a popup should appear in the bottom-right corner of Codespace editor.  
-   - Click **“Open in Browser”** to view your app.  
-
-   ⚠️ *If you miss the popup:*  
-   - Press **Ctrl + C** in the terminal to stop the app.  
-   - Rerun the command from step 2 — the popup should appear again.
-4. A new browser tab will open, showing the interface of your Streamlit app.
-5. **Make changes to your code** in the Codespace editor.  
-   - Refresh the browser tab to see the updated version of your app.  
-
-## Setting Your API Key in GH Codespaces
-You will receive an individual API Key for class assignments. To prevent accidental exposure online, please follow the steps below to securely insert your key in the terminal.
-1. **Open the terminal** inside your Codespace.
-2. Run the command to temporarily set your API Key for this session:  
-   ```bash
-   export API_KEY="your_actual_API_KEY"
-   ```
-3. If you want to run the Streamlit app and set up the key at the same time, run both commands together:
-   ```bash
-   API_KEY="your_actual_API_KEY" streamlit run your-file-name.py
-   ```
-
-## Troubleshooting
-- The Jupyter extension should install automatically. If you still cannot select a Python kernel on Jupyter Notebook: Go to the left sidebar >> **Extensions** >> search for **Jupyter** >> reload window (or reinstall it).   
+(1) Document Upload Area
+- Supports drag-and-drop upload or browsing to select files.
+- File formats: .txt / .pdf
+- Single file limit: 200MB.
+Highlights: Supports large file uploads, meeting learning/research/internal enterprise document scenarios.
+![alt text](3d520375-2f4c-4f57-9900-d9d66bfcbf6f.png)
+(2) Operation Buttons
+- Retrieve Documents Button
+Build index: Split uploaded documents → Embed and vectorize → Store in database.
+- Clear Conversation Button
+Clears the conversation, uploaded documents, and index, restoring the original state.
+Highlights: Simple and intuitive button operation, supporting "one-click search/one-click clear".
+![alt text](9041ca1e-318e-4352-8bc4-16f63e3ab0bd.png)
+(3) Status Prompt Area
+- After a successful upload, the number of documents and the number of blocks will be displayed.
+- If the upload fails or the file is not processed, a reminder message will be displayed.
+![alt text](8c41c09d-5c9c-44e5-9484-94175c61a007.png)
+(4) Conversation Window
+- The user enters a question at the bottom (natural language questions are supported).
+![alt text](5ed8ba71-538b-4957-880c-9e82300cba39.png)
+- The system returns the answer and lists the corresponding document source in "Sources".
+![alt text](635f3a78-2a60-4157-984a-ddd56148376f.png)
+- Supports continuous conversation and maintains context memory.
+Highlights: It not only accurately retrieves answers, but also automatically summarizes documents and always provides sources to ensure transparent results.

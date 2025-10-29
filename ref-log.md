@@ -1,0 +1,7 @@
+I used chatgpt as an assistant to complete this task.
+
+I uploaded the code samples provided in the class materials to chatgpt and asked it to explain the meaning of each line of code and teach me how to understand it. I used it as a tutor to explain the content I didn't understand.
+
+After Chatgpt's explanation, I understood which functional modules and page designs each section of code covered. I then wrote the front-end functional code and back-end logic code based on my needs by myself. When I finished, I uploaded each completed code snippet to Chatgpt to help me check the syntax errors and logic issues. After modifying it based on its recommendations, I tested the app. However, some issues arose during operation. For example, after clearing the chat history and uploading a new document, my app's search remained based on the old document's content. When I tried to ask a question again, it continued to answer based on the old document's content, not the new document. I asked Chatgpt about this issue to help me identify the problem. Chatgpt's explanation helped me realize that when I wrote the code to clear the chat box, I had only cleared the conversation content, not other data, such as vectors.
+
+Therefore, I modified the background retrieval code so that when I cleared the conversation, the previous branch and vector would also be cleared and re-retrieved. After the modification, my app page could run normally.
